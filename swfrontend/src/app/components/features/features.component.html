@@ -1,0 +1,28 @@
+<!-- <p-selectButton [options]="options" [(ngModel)]="value"></p-selectButton> -->
+
+<p style="color: yellow; font-size: 30px;">Para descobrir o tempo que nave precisa para percorrer determinada distância,
+    <br>preencha o campo com a distância e pressione o botão Calcular</p>
+
+<p-inputNumber inputId="integeronly" [(ngModel)]="distancia"></p-inputNumber>
+<p-button label="Calcular" (onClick)="calcular()"></p-button>
+
+    <p-table [value]="datasetNave.naves"
+        [totalRecords]="totalRecords" 
+        [paginator]="true" [rows]="10">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Nome</th>
+                <th>Velocidade(mglt)</th>
+                <th>Quantidade de Passageiros</th>
+                <th>Tempo(h)</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-data>
+            <tr [pSelectableRow]="data">
+                <td>{{data.nome}}</td>
+                <td>{{data.mglt}}</td>
+                <td>{{data.qtdPassageiros}}</td>
+                <td>{{data.tempo}}</td>
+            </tr>
+        </ng-template>
+    </p-table>

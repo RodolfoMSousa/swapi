@@ -1,0 +1,27 @@
+.container {
+    height: 100%;
+    display: flex;
+    padding-top: 10%;
+    padding-left: 45%;
+}
+.first-segment {
+    width: fit-content;
+    color: yellow;
+    font-size: 20px;
+    width: fit-content;
+}
+
+table{
+    tr {
+        th:first-child{
+            padding-right: 30px;
+        }
+        th {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+.table-filmes {
+    width: 400px;
+}

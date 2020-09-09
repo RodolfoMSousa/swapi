@@ -1,0 +1,13 @@
+.menu {
+     ::ng-deep {
+        p-tabmenu {
+            .ui-tabmenu {
+                .ui-tabmenu-nav {
+                    border-bottom: 0px;
+                }
+            }
+        }
+    }
+    width: fit-content;
+    margin: auto;
+}

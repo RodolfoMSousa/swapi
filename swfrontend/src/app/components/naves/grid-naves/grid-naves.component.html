@@ -1,0 +1,19 @@
+<p-table [value]="datasetNave.naves"
+    [totalRecords]="totalRecords" [lazy]="true" (onLazyLoad)="loadNavesLazy($event)" 
+    [paginator]="true" [rows]="10" [loading]="loading" selectionMode="single" [(selection)]="selectedRow"
+    (onRowSelect)="onRowSelect($event)">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>Modelo</th>
+            <th>Quantidade</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+        <tr [pSelectableRow]="data">
+            <td>{{data.nome}}</td>
+            <td>{{data.modelo}}</td>
+            <td>{{data.qtdPassageiros}}</td>
+        </tr>
+    </ng-template>
+</p-table>

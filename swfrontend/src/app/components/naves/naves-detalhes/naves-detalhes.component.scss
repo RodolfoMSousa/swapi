@@ -1,0 +1,25 @@
+.container {
+    height: 100%;
+    padding-top: 10%;
+    width: fit-content;
+    margin: auto;
+}
+.first-segment {
+    color: yellow;
+    font-size: 20px;
+}
+
+table{
+    tr {
+        th:first-child{
+            padding-right: 30px;
+        }
+        th {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+.table-filmes {
+    width: 400px;
+}

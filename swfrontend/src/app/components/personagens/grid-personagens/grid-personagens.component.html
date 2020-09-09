@@ -1,0 +1,24 @@
+<p-table [value]="datasetPersonagem.personagens" 
+    [totalRecords]="totalRecords" [lazy]="true" (onLazyLoad)="loadPersonagensLazy($event)" 
+    [paginator]="true" [rows]="10" [loading]="loading" selectionMode="single" [(selection)]="selectedPersonagem"
+    (onRowSelect)="onRowSelect($event)">
+
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>Ano de Nascimento</th>
+            <th>Gênero</th>
+            <th>Altura</th>
+            <th>Peso</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-pers>
+        <tr [pSelectableRow]="pers">
+            <td>{{pers.nome}}</td>
+            <td>{{pers.anoNascimento}}</td>
+            <td>{{pers.genero}}</td>
+            <td>{{pers.altura}}</td>
+            <td>{{pers.peso}}</td>
+        </tr>
+    </ng-template>
+</p-table>

@@ -1,0 +1,19 @@
+<p-table [value]="datasetPlaneta.planetas"
+    [totalRecords]="totalRecords" [lazy]="true" (onLazyLoad)="loadPlanetasLazy($event)" 
+    [paginator]="true" [rows]="10" [loading]="loading" selectionMode="single" [(selection)]="selectedRow"
+    (onRowSelect)="onRowSelect($event)">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>População</th>
+            <th>Clima</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+        <tr [pSelectableRow]="data">
+            <td>{{data.nome}}</td>
+            <td>{{data.populacao}}</td>
+            <td>{{data.clima}}</td>
+        </tr>
+    </ng-template>
+</p-table>
